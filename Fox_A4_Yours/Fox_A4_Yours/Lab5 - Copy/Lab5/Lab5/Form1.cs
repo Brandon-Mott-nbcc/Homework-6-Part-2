@@ -44,13 +44,13 @@ namespace Lab5
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
-        {
+        {   
             if(txtCode.Text == lblCode.Text) 
             { 
                 grpChoose.Show();
                 grpLogin.Enabled = false;
             }
-            else if (count = maxCount)
+            else if (count == maxCount)
             {
                 MessageBox.Show(maxCount+" attempt to login\n Account Locked - Closing Program", PROGRAMMER, MessageBoxButtons.OK);
                 this.Close();
@@ -119,7 +119,7 @@ namespace Lab5
         //This is the Clear button in Group Box Stats//
         private void btnClear_Click(object sender, EventArgs e)
         {
-            ResetStatsGrp()
+            ResetStatsGrp();
         }
 
         //This function swaps strings//
@@ -164,7 +164,7 @@ namespace Lab5
         //Counts the amount of characters in each string then displays that data//
         private void btnAnalyze_Click(object sender, EventArgs e)
         {
-            if (CheckInput() 
+            if (CheckInput()) 
             { 
                 lblResults.Text = "First String = " + txtString1.Text + "\n Characters = " + txtString1.TextLength + "\n Second String = " + txtString2.Text + "\n Characters = " + txtString2.TextLength;
             }
